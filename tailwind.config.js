@@ -1,8 +1,10 @@
 /** @type {import('tailwindcss').Config} */
-export default {
+
+module.exports = {
   content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
     fontSize: {
@@ -18,7 +20,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        palanquin: ['Palanquin', 'sans-serif'],
+        Jost: ['Jost', 'sans-serif'],
         montserrat: ['Montserrat', 'sans-serif'],
       },
       colors: {
@@ -32,8 +34,7 @@ export default {
         '3xl': '0 10px 40px rgba(0, 0, 0, 0.1)'
       },
       backgroundImage: {
-        'hero': "url('assets/images/collection-background.svg')",
-        'card': "url('assets/images/thumbnail-background.svg')",
+        'hero': "url('/assets/images/collection-background.svg')",
       },
       screens: {
         "wide": "1440px"
